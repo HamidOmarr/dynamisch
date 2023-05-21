@@ -24,7 +24,6 @@
         echo "Fout bij de databaseverbinding: " . $e->getMessage();
     }
 
-    // Haal het totale aantal characters op
     try {
         $stmt = $conn->query("SELECT COUNT(*) FROM characters");
         $totalCharacters = $stmt->fetchColumn();
@@ -40,7 +39,7 @@
 
 <div id="container">
     <?php
-    // Haal alle characters op
+
     try {
         $stmt = $conn->query("SELECT * FROM characters ORDER BY name");
         $characters = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -48,7 +47,6 @@
         echo "Fout bij het ophalen van de characters: " . $e->getMessage();
     }
     
-    // Loop door de characters en toon ze
     foreach ($characters as $character) {
         $name = $character['name'];
         $avatar = $character['avatar'];
@@ -76,7 +74,7 @@
     ?>
 </div>
 
-<footer>&copy; Jouw naam 2023</footer>
+<footer>&copy; Hamid 2023</footer>
 
 </body>
 </html>

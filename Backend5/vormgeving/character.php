@@ -23,7 +23,7 @@ try {
     echo "Fout bij de databaseverbinding: " . $e->getMessage();
 }
 
-// Haal de karaktergegevens op
+
 if (isset($_GET['name'])) {
     $name = $_GET['name'];
     
@@ -79,6 +79,6 @@ if (isset($_GET['name'])) {
         <div style="clear: both"></div>
     </div>
 </div>
-<footer>&copy; Jouw naam 2023</footer>
+<footer>&copy; Hamid 2023</footer>
 </body>
 </html>
